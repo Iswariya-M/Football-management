@@ -1,0 +1,15 @@
+
+ <app-nav></app-nav>  
+ <div class="container">
+   <h2>Match Schedule</h2>
+   <div class="schedule-table">
+     <div class="match-column">
+       <div *ngFor="let match of matches" class="match-box">
+         <div class="match">{{ match.team1 }} vs {{ match.team2}}</div>
+         <div class="date">DATE:{{ formatDate(match.date) }}</div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <button (click)="goBack()" class="back-button">BACK</button>
+ 

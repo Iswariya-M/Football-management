@@ -1,0 +1,46 @@
+.container {
+    margin: 0 auto;
+    width: 50%; 
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .team-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .team-form label,
+  .team-form input {
+    margin-bottom: 10px;
+  }
+  
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .team-item {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .team-item {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+  
+  .team-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 10px;
+  }
+  

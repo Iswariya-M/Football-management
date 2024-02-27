@@ -1,0 +1,82 @@
+<app-nav></app-nav>
+<div class="container">
+    <h2>Teams</h2>
+    <button (click)="toggleTeamForm()">Add Team</button>
+    <div *ngIf="showTeamForm">
+        <div class="container">
+            <h2>Add Team</h2>
+            <form #teamForm="ngForm" (ngSubmit)="onSubmit()" class="team-form">
+              <label>Team Name: </label>
+              <input type="text" [(ngModel)]="teamName" name="teamName" required><br>
+              <label>Team Caption: </label>
+              <input type="text" [(ngModel)]="teamCaption" name="teamCaption"><br>
+              <label>Player 1:</label>
+              <input type="text" [(ngModel)]="player1" name="player1"><br>
+              <label>Player 2:</label>
+              <input type="text" [(ngModel)]="player2" name="player2"><br>
+              <label>Player 3:</label>
+              <input type="text" [(ngModel)]="player3" name="player3"><br>
+              <label>Player 4:</label>
+              <input type="text" [(ngModel)]="player4" name="player4"><br>
+              <label>Player 5:</label>
+              <input type="text" [(ngModel)]="player5" name="player5"><br>
+              <label>Player 6:</label>
+              <input type="text" [(ngModel)]="player6" name="player6"><br>
+              <label>Player 7:</label>
+              <input type="text" [(ngModel)]="player7" name="player7"><br>
+              <label>Player 8:</label>
+              <input type="text" [(ngModel)]="player8" name="player8"><br>
+              <label>Player 9:</label>
+              <input type="text" [(ngModel)]="player9" name="player9"><br>
+              <label>Player 10:</label>
+              <input type="text" [(ngModel)]="player10" name="player10"><br>
+              <button type="submit" [disabled]="!teamForm.valid">Submit</button>
+            </form>
+    </div>
+    <ul class="team-list">
+      <li *ngFor="let team of teams">
+        <div class="team-box">
+          <div>{{ team.name }} - {{ team.caption }}<br>
+        <div> Players:
+        <ul>
+          <li>{{ team.player1 }}</li>
+          <li>{{ team.player2 }}</li>
+          <li>{{ team.player3 }}</li>
+          <li>{{ team.player4 }}</li>
+          <li>{{ team.player5 }}</li>
+          <li>{{ team.player6 }}</li>
+          <li>{{ team.player7 }}</li>
+          <li>{{ team.player8 }}</li>
+          <li>{{ team.player9 }}</li>
+          <li>{{ team.player10 }}</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div >
+    <h2>Matches</h2>
+    <button (click)="toggleMatchForm()">Add Match</button>
+    <div *ngIf="showMatchForm">
+      <div class="container">
+      <form (submit)="addMatch()" class="team-form">
+        <label>Team 1: </label>
+        <input type="text" [(ngModel)]="team1" name="team1" required><br>
+        <label>Team 2: </label>
+        <input type="text" [(ngModel)]="team2" name="team2" required><br>
+        <label>Date: </label>
+        <input type="date" [(ngModel)]="date" name="date" required><br>
+        <button type="submit">Submit</button>
+      </form>
+
+      <ul >
+        <li *ngFor="let match of matches">{{ match.team1 }} vs {{ match.team2 }} - {{ formatDate( match.date )}}</li>
+      </ul>
+      </div>
+
+    </div>
+    
+  </div>
+  

@@ -1,0 +1,50 @@
+<app-nav></app-nav>
+<body>
+<div class="container">
+    <div class="container-box">
+    <div class="book-form">
+    <h2>Book a Match</h2>
+    <form (submit)="bookMatch()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" [(ngModel)]="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required><br>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" placeholder="Mobile" [(ngModel)]="mobile" name="mobile" required><br>
+        </div>
+        <div class="form-group">
+            <label for="match">Match:</label>
+            <select id="match" name="match" [(ngModel)]="match" required>
+                <option *ngFor="let match of matches" [value]="match.team1 + ' vs ' + match.team2 + ' (' + match.date + ')'">{{ match.team1 }} vs {{ match.team2 }}</option>
+              </select>  
+          </div>
+        <button type="submit">Book Match</button>
+    </form>
+    <br>
+    <button (click)="toggleMatchDetails()" class="toggle">check the date of match here</button>
+    <div *ngIf="showMatchDetails" >
+      <h3>Match Details</h3>
+      <ul>
+        <li *ngFor="let match of matches">
+          {{ match.team1 }} vs {{ match.team2 }} - {{  formatDate( match.date )}}
+        </li>
+      </ul>
+    </div> 
+    <br>
+    <div>
+    <button (click)="goBack()" class="back-button">BACK</button>  
+    </div>
+</div>
+</div>
+
+</div>
+</body>
+
+
+
+

@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+
+<div class="container">
+  <div class="team-details">
+    <h2>Team Details</h2>
+    <div *ngIf="team">
+      <p class="team-name"><strong>TEAM NAME:  </strong>{{ team.name }}</p>
+      <p class="team-caption"><strong>TEAM CAPTION:  </strong>{{ team.caption }}</p>
+      <p><strong>Players:</strong></p>
+      <div class="left-players">
+        <ul>
+          <li>{{ team.player1 }}</li>
+          <li>{{ team.player2 }}</li>
+          <li>{{ team.player3 }}</li>
+          <li>{{ team.player4 }}</li>
+          <li>{{ team.player5 }}</li>
+        </ul>
+      </div>
+      <div class="right-players">
+        <ul>
+          <li>{{ team.player6 }}</li>
+          <li>{{ team.player7 }}</li>
+          <li>{{ team.player8 }}</li>
+          <li>{{ team.player9 }}</li>
+          <li>{{ team.player10 }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <button (click)="goBack()" class="back-button">BACK</button>
+</div>

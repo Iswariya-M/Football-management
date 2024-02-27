@@ -1,0 +1,35 @@
+.success-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .details-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  h2{
+    text-align: center;
+    
+  }
+
+  .back-button {
+    background-color: #a6a2a2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+   
+  }
+  

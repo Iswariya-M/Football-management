@@ -1,0 +1,16 @@
+<app-nav></app-nav>
+<div *ngIf="formData"  class="success-container">
+    
+    <div class="details-box">
+      <h2>Success!</h2>
+      <p>Name: {{ formData.name }}</p>
+      <p>Email: {{ formData.email }}</p>
+      <p>Mobile: {{ formData.mobile }}</p>
+      <p>Match: {{ formData.match.split('(')[0] }}</p>
+      <p>Date: {{ formatDate(formData.match.split('(')[1].slice(0, -1)) }}</p>
+     
+    </div>
+    <button (click)="goBack()" class="back-button">BACK</button>
+    
+  </div>
+  

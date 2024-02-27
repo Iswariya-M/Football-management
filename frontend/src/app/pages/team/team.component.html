@@ -1,0 +1,53 @@
+<!-- <app-nav></app-nav>
+<body>
+<h2>Team List</h2>
+<div class="table-container">
+    
+    <div class="table">
+      <div class="column">
+        <h2>Team Names</h2>
+        <ul class="team-list">
+          <li *ngFor="let team of teams">
+            <a (click)="goToTeam(team.id)">
+              {{ team.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Caption</h2>
+        <ul class="match-list">
+          <li *ngFor="let team of teams">
+            {{ team.caption }}
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+<button (click)="goBack()" class="back-button">BACK</button>
+</body>
+
+<footer>
+  <app-footer></app-footer>
+</footer> -->
+
+<app-nav></app-nav>
+<body>
+  
+  <div class="team-container">
+    <h2>TEAMS AVAILABLE </h2>
+    <div class="schedule-table">
+      <div class="match-column">
+      <div class="match-box" *ngFor="let team of teams">
+        <div class="team-box">
+          <div class="match">TEAM NAME:   {{ team.name }}</div>
+          <div class="date">TEAM CAPTION:   {{ team.caption }}</div>
+          <button class="players-button" (click)="goToTeam(team.id)">Players</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <button (click)="goBack()" class="back-button">BACK</button>
+</body>
+<app-footer></app-footer>
